@@ -1,0 +1,35 @@
+Fichier binaire plugins/m2m/m2m.pdb correspondant
+plugins/m2m/packet-m2m.c:157:static expert_field ei_m2m_unexpected_length = EI_INIT;
+plugins/m2m/packet-m2m.c:399:					expert_add_info_format(pinfo, NULL, &ei_m2m_unexpected_length, "Expected length %d, got %d.", expected_len, offset - tlv_offset);
+plugins/m2m/packet-m2m.c:779:		{ &ei_m2m_unexpected_length, { "m2m.unexpected_length", PI_MALFORMED, PI_ERROR, "Unexpected length", EXPFILL }},
+Fichier binaire plugins/m2m/packet-m2m.obj correspondant
+	/* M2M TLV display */
+	static hf_register_info hf[] =
+	{
+		{
+			&hf_m2m_sequence_number,
+			{
+				"Packet Sequence Number", "m2m.seq_number",
+				FT_UINT16, BASE_DEC, NULL, 0x0,
+				NULL, HFILL
+			}
+		},
+		{
+			&hf_m2m_frame_number,
+			{
+				"Value", "m2m.frame_number",
+				FT_UINT24, BASE_DEC, NULL, 0x0,
+				NULL, HFILL
+			}
+		},
+		{
+			&hf_m2m_tlv_count,
+			{
+				"Number of TLVs in the packet", "m2m.tlv_count",
+				FT_UINT16, BASE_DEC, NULL, 0x0,
+				NULL, HFILL
+			}
+		}
+	};
+
+	/* WiMax TLV display */
