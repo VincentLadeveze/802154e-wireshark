@@ -7,7 +7,7 @@ What's in
 ---------
 - Wireshark v.10
 - Built-in dissector : quick and very dirty version
-- Empty plugin compiling
+- Empty plugin
 
 Work status
 -----------
